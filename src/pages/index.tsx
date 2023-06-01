@@ -7,6 +7,7 @@
 import localFont from "next/font/local";
 import Header from "src/components/Header";
 import Hero from "src/components/Hero";
+import OpenNewTab from "src/components/OpenNewTab";
 
 export const EffraFont = localFont({
   src: [
@@ -35,6 +36,7 @@ export default function Home() {
     <>
       <Header />
       <Hero />
+      <OpenNewTab />
     </>
   );
 }

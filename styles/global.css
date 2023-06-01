@@ -20,7 +20,7 @@
 
 .line {
   left: 20px;
-  height: 100vh;
+  height: calc(100vh + 6rem) ;
   width: 1px;
   animation: lineAnimation 20s infinite linear;
   background-image: url("../src/assets/icons/lines.svg");

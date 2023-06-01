@@ -5,14 +5,16 @@ import Twitter from "../../assets/images/icons/twitter.svg";
 import Pinterest from "../../assets/images/icons/pinterest.svg";
 import Facebook from "../../assets/images/icons/facebook.svg";
 import Dribble from "../../assets/images/icons/dribble.svg";
+import Mouse from "../../assets/images/icons/mouse.svg";
 
 import Image from "next/image";
 
 import { motion } from "framer-motion";
+import BgLines from "./BgLines";
 
 function Hero() {
   return (
-    <section className="bg-black pt-48 pb-24 overflow-x-hidden flex flex-col relative h-screen">
+    <section className="bg-black 2xl:pt-48 pt-40 pb-24 overflow-x-hidden overflow-y-hidden flex flex-col relative">
       <div className="mx-auto max-w-[1312px] px-4 z-10">
         <h1
           className={`text-white text-center mb-6 ${EffraFont.className} font-bold text-7xl`}
@@ -146,26 +148,11 @@ function Hero() {
         </motion.div>
       </div>
 
+      <BgLines />
 
-
-      <div className="flex w-full justify-between absolute top-0">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
+      <div className="text-white z-10 flex items-center flex-col relative top-9">
+        <span className={GoodDog.className}>Click and drag cards</span>
+        <Image src={Mouse} alt="Icon mouse" width={24} height={24} />
       </div>
     </section>
   );
