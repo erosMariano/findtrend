@@ -3,6 +3,21 @@
 @tailwind utilities;
 
 
+.menu_item::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #a8ff35;
+  border-radius: 100px;
+  bottom: 0;
+  left: 0;
+  transition: .3s;
+}
+.menu_item:hover::after {
+  width: 100%;
+}
+
 .line {
   left: 20px;
   height: 100vh;
@@ -13,7 +28,7 @@
   width: 1px;
   background-position-y: 0;
 }
- 
+
 @keyframes lineAnimation {
   0% {
     background-position-y: 0;

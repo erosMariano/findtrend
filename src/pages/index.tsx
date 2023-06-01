@@ -5,8 +5,8 @@
 // import BtnHeroSocMed from "./components/btn-hero-socmed";
 // import NewTab from "./components/newTab";
 import localFont from "next/font/local";
+import Header from "src/components/Header";
 import Hero from "src/components/Hero";
-
 
 export const EffraFont = localFont({
   src: [
@@ -28,11 +28,12 @@ export const EffraFont = localFont({
   ],
 });
 
-export const GoodDog = localFont({src: "../fonts/GoodDog_New.ttf"})
+export const GoodDog = localFont({ src: "../fonts/GoodDog_New.ttf" });
 
 export default function Home() {
   return (
     <>
+      <Header />
       <Hero />
     </>
   );
