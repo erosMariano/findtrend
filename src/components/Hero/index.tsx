@@ -6,9 +6,9 @@ import Pinterest from "../../assets/images/icons/pinterest.svg";
 import Facebook from "../../assets/images/icons/facebook.svg";
 import Dribble from "../../assets/images/icons/dribble.svg";
 import Mouse from "../../assets/images/icons/mouse.svg";
+import Close from "../../assets/images/icons/closeDragDropHome.svg";
 
 import Image from "next/image";
-
 import { motion } from "framer-motion";
 import BgLines from "./BgLines";
 
@@ -63,10 +63,13 @@ function Hero() {
         >
           <span
             style={{ filter: "drop-shadow(5px 8px 8px rgba(0, 0, 0, 0.84))" }}
-            className="gap-3 text-white w-[341px] h-[82px] bg-black3 -rotate-[4deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
+            className="text-xl gap-3 text-white w-[341px] h-[82px] bg-black3 -rotate-[4deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
           >
             <Image src={Twitter} width={32} height={32} alt="Icon twitter" />
             Cryptopunk - Search
+            <div className="absolute right-0">
+              <Image src={Close} alt="Icon close" />
+            </div>
           </span>
         </motion.div>
 
@@ -86,15 +89,19 @@ function Hero() {
         >
           <span
             style={{ filter: "drop-shadow(5px 8px 8px rgba(0, 0, 0, 0.84))" }}
-            className="gap-3 text-white w-[341px] h-[82px] bg-black3 -rotate-[4deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
+            className="text-xl gap-3 text-white w-[341px] h-[82px] bg-black3 -rotate-[4deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
           >
             <Image
               src={Pinterest}
               width={32}
               height={32}
+              priority
               alt="Icon Pinterest"
             />
             Popular Design - Search
+            <div className="absolute right-0">
+              <Image src={Close} alt="Icon close" />
+            </div>
           </span>
         </motion.div>
 
@@ -116,10 +123,13 @@ function Hero() {
         >
           <span
             style={{ filter: "drop-shadow(5px 8px 8px rgba(0, 0, 0, 0.84))" }}
-            className="gap-3 text-white w-[341px] h-[82px] bg-black3 rotate-[2deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
+            className="text-xl gap-3 text-white w-[341px] h-[82px] bg-black3 rotate-[2deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
           >
             <Image src={Facebook} width={32} height={32} alt="Icon Facebook" />
             Product Design - Search
+            <div className="absolute right-0">
+              <Image src={Close} alt="Icon close" />
+            </div>
           </span>
         </motion.div>
 
@@ -140,10 +150,13 @@ function Hero() {
         >
           <span
             style={{ filter: "drop-shadow(5px 8px 8px rgba(0, 0, 0, 0.84))" }}
-            className="gap-3 text-white w-[341px] h-[82px] bg-black3 -rotate-[4deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
+            className="gap-3 text-xl text-white w-[341px] h-[82px] bg-black3 -rotate-[4deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
           >
             <Image src={Dribble} width={32} height={32} alt="Icon Dribble" />
             Elon Musk - Search
+            <div className="absolute right-0">
+              <Image src={Close} alt="Icon close" />
+            </div>
           </span>
         </motion.div>
       </div>

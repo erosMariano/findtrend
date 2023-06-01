@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Logo from "../../assets/logo.svg";
 import Image from "next/image";
 import { EffraFont } from "@/pages/index";
+
 function Header() {
   const [headerActive, setHeaderActive] = useState(false);
 
