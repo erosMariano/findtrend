@@ -8,7 +8,9 @@ import localFont from "next/font/local";
 import Head from "next/head";
 import Header from "src/components/Header";
 import Hero from "src/components/Hero";
+import LongText from "src/components/LongText";
 import OpenNewTab from "src/components/OpenNewTab";
+import PartnerSection from "src/components/Partner";
 export const EffraFont = localFont({
   src: [
     {
@@ -48,6 +50,8 @@ export default function Home() {
       <Header />
       <Hero />
       <OpenNewTab />
+      <LongText />
+      <PartnerSection />
     </>
   );
 }

@@ -11,6 +11,7 @@ import Close from "../../assets/images/icons/closeDragDropHome.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import BgLines from "./BgLines";
+import CardGRab from "./CardsGrab";
 
 function Hero() {
   return (
@@ -45,120 +46,42 @@ function Hero() {
       </div>
 
       <div className="mt-24 flex items-center justify-center">
-        <motion.div
-          style={{
-            position: "relative",
-            left: "132px",
-            top: "-58px",
-            zIndex: 5,
-            cursor: "pointer",
-          }}
-          drag
-          dragConstraints={{
-            top: -50,
-            left: -50,
-            right: 50,
-            bottom: 50,
-          }}
-        >
-          <span
-            style={{ filter: "drop-shadow(5px 8px 8px rgba(0, 0, 0, 0.84))" }}
-            className="text-xl gap-3 text-white w-[341px] h-[82px] bg-black3 -rotate-[4deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
-          >
-            <Image src={Twitter} width={32} height={32} alt="Icon twitter" />
-            Cryptopunk - Search
-            <div className="absolute right-0">
-              <Image src={Close} alt="Icon close" />
-            </div>
-          </span>
-        </motion.div>
-
-        <motion.div
-          style={{
-            position: "relative",
-            zIndex: 4,
-            cursor: "pointer",
-          }}
-          drag
-          dragConstraints={{
-            top: -50,
-            left: -50,
-            right: 50,
-            bottom: 50,
-          }}
-        >
-          <span
-            style={{ filter: "drop-shadow(5px 8px 8px rgba(0, 0, 0, 0.84))" }}
-            className="text-xl gap-3 text-white w-[341px] h-[82px] bg-black3 -rotate-[4deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
-          >
-            <Image
-              src={Pinterest}
-              width={32}
-              height={32}
-              priority
-              alt="Icon Pinterest"
-            />
-            Popular Design - Search
-            <div className="absolute right-0">
-              <Image src={Close} alt="Icon close" />
-            </div>
-          </span>
-        </motion.div>
-
-        <motion.div
-          style={{
-            position: "relative",
-            top: "-35px",
-            left: "-50px",
-            zIndex: 2,
-            cursor: "pointer",
-          }}
-          drag
-          dragConstraints={{
-            top: -50,
-            left: -50,
-            right: 50,
-            bottom: 50,
-          }}
-        >
-          <span
-            style={{ filter: "drop-shadow(5px 8px 8px rgba(0, 0, 0, 0.84))" }}
-            className="text-xl gap-3 text-white w-[341px] h-[82px] bg-black3 rotate-[2deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
-          >
-            <Image src={Facebook} width={32} height={32} alt="Icon Facebook" />
-            Product Design - Search
-            <div className="absolute right-0">
-              <Image src={Close} alt="Icon close" />
-            </div>
-          </span>
-        </motion.div>
-
-        <motion.div
-          style={{
-            position: "relative",
-            left: "-127px",
-            zIndex: 1,
-            cursor: "pointer",
-          }}
-          drag
-          dragConstraints={{
-            top: -50,
-            left: -50,
-            right: 50,
-            bottom: 50,
-          }}
-        >
-          <span
-            style={{ filter: "drop-shadow(5px 8px 8px rgba(0, 0, 0, 0.84))" }}
-            className="gap-3 text-xl text-white w-[341px] h-[82px] bg-black3 -rotate-[4deg] flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]"
-          >
-            <Image src={Dribble} width={32} height={32} alt="Icon Dribble" />
-            Elon Musk - Search
-            <div className="absolute right-0">
-              <Image src={Close} alt="Icon close" />
-            </div>
-          </span>
-        </motion.div>
+        <CardGRab
+          content="Cryptopunk - Search"
+          image={Twitter}
+          altImage="Icon twitter"
+          positionLeft="132px"
+          positionTop="-58px"
+          zIndex={5}
+          deg="-rotate-[4deg]"
+        />
+        <CardGRab
+          content="Popular Design - Search"
+          image={Pinterest}
+          altImage="Icon Pinterest"
+          positionLeft=""
+          positionTop=""
+          zIndex={4}
+          deg="-rotate-[2deg]"
+        />
+        <CardGRab
+          content="Product Design - Search"
+          image={Facebook}
+          altImage="Icon Pinterest"
+          positionLeft="-50px"
+          positionTop="-35px"
+          zIndex={2}
+          deg="rotate-[2deg]"
+        />
+        <CardGRab
+          content="Elon Musk - Search"
+          image={Dribble}
+          altImage="Icon Dribble"
+          positionLeft="-127px"
+          positionTop=""
+          zIndex={1}
+          deg="-rotate-[4deg]"
+        />
       </div>
 
       <BgLines />

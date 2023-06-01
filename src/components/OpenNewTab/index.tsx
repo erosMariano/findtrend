@@ -6,29 +6,40 @@ import Close from "../../assets/images/icons/closeDragDropHome.svg";
 import IconLogo from "../../assets/images/icons/logoIcon.svg";
 import React, { useRef } from "react";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+
 function OpenNewTab() {
   const constraintsRef = useRef(null);
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const opacityVariants = {
+    hidden: {
+      opacity: 0,
+      y: 0,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
 
   return (
     <section className="bg-primary py-36">
       <h1 className={`text-center font-bold text-7xl ${EffraFont.className}`}>
         Open new tabs is sh*t{" "}
       </h1>
-      {/* <div>
-        <motion.div
-          className="w-80 h-80 bg-black border-full"
-          initial={{ opacity: 0 }}
-          transition={{ delay: 0.5 }}
-          whileInView={{ opacity: 1 }}
-        />
-      </div> */}
 
-      <div className="flex gap-6 items-center justify-center mt-16">
+      <div className="flex gap-6 items-center justify-center mt-16" ref={ref}>
         <div className="w-28 text-center rotate-6 flex flex-col item-center justify-center">
           <motion.div
-            initial={{ opacity: 0 }}
-            transition={{ delay: 0.2 }}
-            whileInView={{ opacity: 1 }}
+            variants={opacityVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Image
               src={ArrowLeft}
@@ -48,10 +59,11 @@ function OpenNewTab() {
             drag
             dragConstraints={constraintsRef}
             dragSnapToOrigin={true}
-            className="cursor-pointer"
-            initial={{ opacity: 0 }}
-            transition={{ delay: 0.6 }}
-            whileInView={{ opacity: 1 }}
+            className="cursor-grab"
+            variants={opacityVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             <span className="relative text-xl gap-3 text-white w-[341px] h-[82px] bg-black3 flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))]">
               <Image src={IconLogo} width={32} height={32} alt="Icon twitter" />
@@ -64,9 +76,10 @@ function OpenNewTab() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          transition={{ delay: 0.4 }}
-          whileInView={{ opacity: 1 }}
+          variants={opacityVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           <div className="w-24 text-center rotate-6 flex flex-col item-center justify-center relative top-6">
             <p className={GoodDog.className}>You just need one tab now</p>
@@ -76,9 +89,10 @@ function OpenNewTab() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        transition={{ delay: 0.8 }}
-        whileInView={{ opacity: 1 }}
+        variants={opacityVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        transition={{ duration: 0.5, delay: 0.8 }}
       >
         <p
           className={`w-[580px] text-center mx-auto mt-16 ${EffraFont.className}`}

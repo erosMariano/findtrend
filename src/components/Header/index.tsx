@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Logo from "../../assets/logo.svg";
 import Image from "next/image";
 import { EffraFont } from "@/pages/index";
@@ -6,19 +6,23 @@ import { EffraFont } from "@/pages/index";
 function Header() {
   const [headerActive, setHeaderActive] = useState(false);
 
-  useEffect(() => {
-    function stickyMenu() {
-      if (window.scrollY > 50) {
-        if (!headerActive) {
-          setHeaderActive(true);
-        }
-      } else {
-        if (headerActive) {
-          setHeaderActive(false);
-        }
+  const stickyMenu = useCallback(() => {
+    if (window.scrollY > 50) {
+      if (!headerActive) {
+        setHeaderActive(true);
+      }
+    } else {
+      if (headerActive) {
+        setHeaderActive(false);
       }
     }
+  }, [headerActive]);
+
+  useEffect(() => {
     window.addEventListener("scroll", stickyMenu);
+    return () => {
+      window.removeEventListener("scroll", stickyMenu);
+    }  
   }, [headerActive]);
 
   return (
