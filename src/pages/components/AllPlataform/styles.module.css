@@ -1,0 +1,15 @@
+.container{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.section{
+
+  
+}
+.container div{
+  width: 124px;
+  height: 124px;
+
+  background: #7769f1;
+}

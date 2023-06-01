@@ -1,0 +1,15 @@
+.text {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 76px;
+  position: sticky;
+  top: 100px;
+  color: #ADADAD;
+}
+
+.section{
+  top: 0px;
+  height: 250vh;
+}

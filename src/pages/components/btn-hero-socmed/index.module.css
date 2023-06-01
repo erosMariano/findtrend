@@ -85,3 +85,37 @@
     flex-direction: column;
   }
 }
+
+.teste,.teste2, .teste3,.teste4{
+  width: 341px;
+  height: 82px;
+}
+.teste{
+  background-color: red;
+  transform: rotate(-4deg);
+}
+.teste2{
+  background-color: blue;
+  transform: rotate(2deg);
+}
+
+.teste3{
+  background-color: black;
+  transform: rotate(-2deg);
+}
+
+.teste4{
+  background-color: aquamarine;
+  transform: rotate(4deg);
+}
+
+
+.containerTeste{
+  display: flex;
+  background-color: antiquewhite;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  max-width: 1120px;
+  margin: 0 auto;
+}
