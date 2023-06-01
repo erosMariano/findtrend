@@ -1,12 +1,24 @@
-html,
-body,
-* {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
+
+.line {
+  left: 20px;
+  height: 100vh;
+  width: 1px;
+  animation: lineAnimation 20s infinite linear;
+  background-image: url("../src/assets/icons/lines.svg");
+  background-repeat: repeat-y;
+  width: 1px;
+  background-position-y: 0;
+}
+ 
+@keyframes lineAnimation {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 100vh;
+  }
 }
