@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Arrow from "../../assets/images/arrowHero.svg";
 import Image from "next/image";
-import CardPrice from "@/pages/components/Prices/CardPrice";
+import CardPrice from "src/components/Prices/CardPrice";
 
 interface CardPriceProps {
   title: string;

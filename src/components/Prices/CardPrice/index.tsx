@@ -2,7 +2,7 @@ import { EffraFont } from "@/pages/index";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import CheckedIcon from "../../../../assets/images/icons/checked.svg";
+import CheckedIcon from "../../../assets/images/icons/checked.svg";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
@@ -79,8 +79,8 @@ function CardPrice({
 
         <nav className="flex flex-col flex-grow">
           <ul className="flex flex-col gap-6">
-            {listItems.map((item) => (
-              <li className="flex gap-2 text-lg">
+            {listItems.map((item, index) => (
+              <li className="flex gap-2 text-lg" key={item[index]}>
                 <Image src={CheckedIcon} alt="Icon checked" />
                 {item}
               </li>
