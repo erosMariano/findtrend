@@ -6,11 +6,14 @@
 // import NewTab from "./components/newTab";
 import localFont from "next/font/local";
 import Head from "next/head";
+import Footer from "src/components/Footer";
 import Header from "src/components/Header";
 import Hero from "src/components/Hero";
 import LongText from "src/components/LongText";
+import MoreTrending from "src/components/MoreTrendings";
 import OpenNewTab from "src/components/OpenNewTab";
 import PartnerSection from "src/components/Partner";
+import Prices from "src/components/Prices";
 export const EffraFont = localFont({
   src: [
     {
@@ -52,6 +55,9 @@ export default function Home() {
       <OpenNewTab />
       <LongText />
       <PartnerSection />
+      <Prices />
+      <MoreTrending />
+      <Footer />
     </>
   );
 }
