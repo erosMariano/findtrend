@@ -1,11 +1,6 @@
-// import AllPlataform from "./components/AllPlataform";
-// import LongText from "./components/LongText";
-// import Parceiros from "./components/Parceiros";
-// import Prices from "./components/Prices";
-// import BtnHeroSocMed from "./components/btn-hero-socmed";
-// import NewTab from "./components/newTab";
 import localFont from "next/font/local";
 import Head from "next/head";
+import ConnectFindTrend from "src/components/ConnectFindTrend";
 import Footer from "src/components/Footer";
 import Header from "src/components/Header";
 import Hero from "src/components/Hero";
@@ -52,12 +47,13 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
-      <OpenNewTab />
+      {/*<OpenNewTab />
       <LongText />
       <PartnerSection />
+      <ConnectFindTrend />
       <Prices />
       <MoreTrending />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

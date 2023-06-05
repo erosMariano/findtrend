@@ -152,7 +152,7 @@ function Prices() {
               urlRedirect,
               emphasis,
               delay,
-            }) => (
+            }, index) => (
               <CardPrice
                 delay={delay}
                 cardType={cardType}
@@ -162,6 +162,7 @@ function Prices() {
                 title={title}
                 urlRedirect={urlRedirect}
                 emphasis={emphasis}
+                key={index}
               />
             )
           )}
