@@ -14,7 +14,7 @@ function LongText() {
             const updatedText = letters
               .map((letter: string, index: number) => {
                 const color = rect.top + index * 10 < 1 ? "#000000" : "#ADADAD";
-                return `<span style="color: ${color};font-size: 64px; font-weight: 700;">${letter}</span>`;
+              return `<span class="spanLetter" style="color: ${color};">${letter}</span>`;
               })
               .join("");
             el.innerHTML = updatedText;
@@ -31,10 +31,10 @@ function LongText() {
   }, []);
 
   return (
-    <section className="sectionLong py-36 2xl:h-[300vh] h-[320vh] relative">
+    <section className="sectionLong py-20 lg:py-36 2xl:h-[300vh] h-[320vh] relative">
       <div className="mx-auto max-w-[1312px] px-4 sticky top-32">
         <p
-          className={`paragraphLong ${EffraFont.className} font-bold text-gray2 text-[64px]`}
+          className={`paragraphLong ${EffraFont.className} font-bold text-gray2 text-4xl italic lg:not-italic lg:text-[64px]`}
         >
           Findtrend helps you to increase your <br />
           productivity and reduce your computer's

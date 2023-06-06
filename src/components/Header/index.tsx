@@ -29,6 +29,10 @@ function Header() {
   function handleMenuMobileActive() {
     setIconMenu((prevState) => !prevState);
   }
+
+  useEffect(() => {
+    console.log(iconMenu);
+  }, [iconMenu]);
   return (
     <header
       className={`fixed top-0 left-0 w-full z-20 transition ${
@@ -58,29 +62,40 @@ function Header() {
         <nav>
           <ul
             className={`${EffraFont.className} transition-all ${
-              iconMenu ? "top-0" : "-top-[42rem]"
-            } items-center pt-24 h-screen absolute pb-10 bg-black w-full left-0 top-0 flex-col text-white font-medium text-lg flex gap-10 lg:w-auto lg:relative lg:top-0 lg:left-0 lg:h-auto lg:flex-row lg:bg-transparent lg:py-0`}
+              iconMenu ? "top-0" : "-top-[100vh]"
+            } items-center pt-24 absolute pb-20 bg-black w-full left-0  flex-col text-white font-medium text-lg flex gap-10 lg:w-auto lg:relative lg:top-0 lg:left-0 lg:h-auto lg:flex-row lg:bg-transparent lg:py-0`}
           >
+            <div className="bg-black/50 top-0 left-0 absolute w-full h-screen lg:hidden" />
             <li className="menu_item relative">
-              <a onClick={handleMenuMobileActive} href="#">About</a>
+              <a onClick={handleMenuMobileActive} href="#">
+                About
+              </a>
             </li>
             <li className="menu_item relative">
-              <a onClick={handleMenuMobileActive} href="#">How it work</a>
+              <a onClick={handleMenuMobileActive} href="#">
+                How it work
+              </a>
             </li>
             <li className="menu_item relative">
-              <a onClick={handleMenuMobileActive} href="#">Pricing</a>
+              <a onClick={handleMenuMobileActive} href="#">
+                Pricing
+              </a>
             </li>
             <li className="menu_item relative">
-              <a onClick={handleMenuMobileActive} href="#">Solution</a>
+              <a onClick={handleMenuMobileActive} href="#">
+                Solution
+              </a>
             </li>
             <li className="menu_item relative">
-              <a onClick={handleMenuMobileActive} href="#">Features</a>
+              <a onClick={handleMenuMobileActive} href="#">
+                Features
+              </a>
             </li>
 
-            <button className="text-white font-normal text-lg hover:text-primary transition-all lg:hidden">
+            <button className="relative text-white font-normal text-lg hover:text-primary transition-all lg:hidden">
               Login
             </button>
-            <button className="lg:hidden px-8 py-2 bg-white text-black rounded-full text-lg font-medium transition-all border hover:bg-transparent hover:text-primary hover:border-primary">
+            <button className="relative lg:hidden px-8 py-2 bg-white text-black rounded-full text-lg font-medium transition-all border hover:bg-transparent hover:text-primary hover:border-primary">
               Register
             </button>
           </ul>

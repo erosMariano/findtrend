@@ -47,10 +47,10 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
-      {/*<OpenNewTab />
+      <OpenNewTab />
       <LongText />
       <PartnerSection />
-      <ConnectFindTrend />
+      {/*<ConnectFindTrend />
       <Prices />
       <MoreTrending />
       <Footer /> */}

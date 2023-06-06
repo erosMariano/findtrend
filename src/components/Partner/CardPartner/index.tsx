@@ -32,8 +32,8 @@ function CardPartner({ image, alt }: CardPartnerProps) {
         animate={inView ? "visible" : "hidden"}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="w-[266px] h-[120px] bg-gray3 rounded-lg flex items-center justify-center">
-          <Image src={image} alt={alt} />
+        <div className="w-[155px] lg:w-[266px] h-[74px] md:w-[266px] md:h-[120px] bg-gray3 rounded-lg flex items-center justify-center">
+          <Image src={image} alt={alt} className="w-[105px] md:w-auto"/>
         </div>
       </motion.div>
     </div>

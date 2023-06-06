@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .menu_item::after {
   position: absolute;
   content: "";
@@ -12,7 +11,7 @@
   border-radius: 100px;
   bottom: 0;
   left: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
 .menu_item:hover::after {
   width: 100%;
@@ -20,7 +19,7 @@
 
 .line {
   left: 20px;
-  height: calc(100vh + 6rem) ;
+  height: calc(100vh + 6rem);
   width: 1px;
   animation: lineAnimation 20s infinite linear;
   background-image: url("../src/assets/icons/lines.svg");
@@ -29,6 +28,22 @@
   background-position-y: 0;
 }
 
+.spanLetter {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 1024px) {
+  .line {
+    left: 0;
+    height: 100%;
+  }
+
+  .spanLetter {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
 @keyframes lineAnimation {
   0% {
     background-position-y: 0;
@@ -44,6 +59,6 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #A8FF35;
+  background-color: #a8ff35;
   border-radius: 100px;
 }

@@ -104,10 +104,10 @@ function PartnerSection() {
   ];
 
   return (
-    <section className="bg-white py-36">
+    <section className="bg-white py-20 lg:py-36">
       <div className="mx-auto max-w-[1312px] px-4 sticky top-32">
         <h2
-          className={`font-bold text-[64px] mb-20 text-center ${EffraFont.className}`}
+          className={`text-4xl italic lg:not-italic font-bold lg:text-[64px] mb-8 lg:mb-20 text-center ${EffraFont.className}`}
         >
           Findtrend make +1000 Startup grow
         </h2>

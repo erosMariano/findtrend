@@ -18,11 +18,11 @@ function Hero() {
     <section className="bg-black 2xl:pt-48 pt-40 pb-24 overflow-x-hidden overflow-y-hidden flex flex-col relative">
       <div className="mx-auto max-w-[1312px] px-4 z-10">
         <h1
-          className={`text-white text-center mb-6 ${EffraFont.className} font-bold text-7xl`}
+          className={`text-white text-center mb-6 ${EffraFont.className} font-bold lg:normal-case lg:text-7xl text-4xl lg:not-italic italic`}
         >
           Minimize your tabs. <br /> Find the trends!
         </h1>
-        <p className="text-gray1 text-center max-w-lg mx-auto mb-10">
+        <p className="text-gray1 text-center max-w-lg mx-auto mb-10 text-sm lg:text-base leading-6">
           Don't let your computer memories consumes all of those browser tabs.
           Findtrend let you gathers all of your favorite website into one place.
         </p>
@@ -34,7 +34,7 @@ function Hero() {
             Get Started 🔥
           </button>
 
-          <div className="relative -top-2">
+          <div className="relative -top-2 hidden lg:block">
             <span
               className={`text-white block ${GoodDog.className} text-sm w-24 text-center rotate-6`}
             >
@@ -45,7 +45,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="mt-24 flex items-center justify-center">
+      <div className="mt-24 flex items-center justify-center flex-col lg:flex-row">
         <CardGRab
           content="Cryptopunk - Search"
           image={Twitter}

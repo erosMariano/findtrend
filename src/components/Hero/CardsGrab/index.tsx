@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Close from "../../../assets/images/icons/closeDragDropHome.svg";
@@ -22,12 +22,18 @@ function CardGRab({
   content,
   deg
 }: CardGRabProps) {
+  const [validate, setValidate] = useState(false) 
+  useEffect(() => {
+    if(window.innerWidth > 1024){
+      setValidate(true)
+    }
+  }, [])
   return (
     <motion.div
       style={{
         position: "relative",
-        left: `${positionLeft}`,
-        top: `${positionTop}`,
+        left: `${validate ? positionLeft: "0"}`,
+        top: `${validate ? positionTop: "0"}`,
         zIndex: zIndex,
       }}
       drag
@@ -40,7 +46,7 @@ function CardGRab({
     >
       <span
         style={{ filter: "drop-shadow(5px 8px 8px rgba(0, 0, 0, 0.84))" }}
-        className={`text-xl cursor-grab gap-3 text-white w-[341px] h-[82px] bg-black3 flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))] ${deg}`}
+        className={`text-xl cursor-grab gap-3 text-white w-[299.41px] lg:w-[341px] h-[82px] bg-black3 flex items-center justify-center shadow-2xl drop-shadow-[(5px 8px 8px rgba(0, 0, 0, 0.84))] ${deg}`}
       >
         <Image src={image} width={32} height={32} alt={altImage} className="cursor-auto"/>
         {content}
