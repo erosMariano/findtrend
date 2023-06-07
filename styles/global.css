@@ -62,3 +62,12 @@ body::-webkit-scrollbar-thumb {
   background-color: #a8ff35;
   border-radius: 100px;
 }
+
+.scrollSocial::-webkit-scrollbar{
+  width: 0px;
+  border-radius: 100px;
+}
+
+.scrollSocial::-webkit-scrollbar-thumb{
+  background-color: transparent;
+}

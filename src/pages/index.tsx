@@ -50,10 +50,26 @@ export default function Home() {
       <OpenNewTab />
       <LongText />
       <PartnerSection />
-      {/*<ConnectFindTrend />
+      <ConnectFindTrend />
       <Prices />
-      <MoreTrending />
+      {/*<MoreTrending />
       <Footer /> */}
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

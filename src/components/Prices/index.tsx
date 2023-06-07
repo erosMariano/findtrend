@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Arrow from "../../assets/images/arrowHero.svg";
 import Image from "next/image";
 import CardPrice from "src/components/Prices/CardPrice";
-
+import ArrowMobile from "../../assets/images/icons/ArrowCheckSectionMobile.svg";
 interface CardPriceProps {
   title: string;
   subtitle: string;
@@ -90,10 +90,10 @@ function Prices() {
     },
   ];
   return (
-    <section className="bg-black py-36">
+    <section className="bg-black py-20 lg:py-36">
       <div className="mx-auto max-w-[1312px] px-4 w-full">
         <h2
-          className={`${EffraFont.className} font-bold text-[64px] text-white mb-10 text-center`}
+          className={`${EffraFont.className} text-[32px] italic font-bold lg:not-italic lg:text-[64px] text-white mb-10 text-center`}
         >
           Get your best deal
         </h2>
@@ -130,29 +130,33 @@ function Prices() {
               </span>
             </div>
 
-            <div className="rotate-6 absolute -right-20 -top-5">
+            <div className="rotate-6 absolute right-8 top-12 lg:-right-20 lg:-top-5">
+              <Image src={ArrowMobile} alt="" className="block lg:hidden"/>
               <p
                 className={`${GoodDog.className} text-white text-sm w-16 text-center`}
               >
                 Save 10% per month
               </p>
-              <Image src={Arrow} alt="" />
+              <Image src={Arrow} alt="" className="hidden lg:block"/>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 flex gap-10 justify-center">
+        <div className="mt-20 lg:mt-10 flex gap-10 justify-center flex-col flex-wrap lg:flex-row">
           {dataForCards.map(
-            ({
-              cardType,
-              listItems,
-              price,
-              subtitle,
-              title,
-              urlRedirect,
-              emphasis,
-              delay,
-            }, index) => (
+            (
+              {
+                cardType,
+                listItems,
+                price,
+                subtitle,
+                title,
+                urlRedirect,
+                emphasis,
+                delay,
+              },
+              index
+            ) => (
               <CardPrice
                 delay={delay}
                 cardType={cardType}

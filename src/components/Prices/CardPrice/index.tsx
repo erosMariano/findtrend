@@ -59,7 +59,7 @@ function CardPrice({
       className="flex"
     >
       <div
-        className={`${EffraFont.className} w-[360px] ${
+        className={`${EffraFont.className} lg:w-[360px] w-full ${
           emphasis ? "bg-primary" : "bg-white"
         } rounded-2xl p-8 flex flex-col`}
       >
