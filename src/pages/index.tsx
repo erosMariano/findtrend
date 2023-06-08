@@ -52,8 +52,8 @@ export default function Home() {
       <PartnerSection />
       <ConnectFindTrend />
       <Prices />
-      {/*<MoreTrending />
-      <Footer /> */}
+      <MoreTrending />
+      <Footer />  
     </>
   );
 }

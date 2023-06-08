@@ -7,9 +7,9 @@ import { EffraFont } from "@/pages/index";
 function Footer() {
   return (
     <footer className="bg-white py-10">
-      <div className="mx-auto max-w-[1312px] px-4 flex w-full justify-between">
-        <Image alt="Logo FindTrend" src={Logo} width={170} height={41} />
-        <ul className={`text-lg ${EffraFont.className} text-black flex items-center justify-between gap-10`}>
+      <div className="mx-auto max-w-[1312px] px-4 flex w-full justify-between flex-col lg:flex-row">
+        <Image alt="Logo FindTrend" src={Logo} width={170} height={41} className="mx-auto block lg:ml-0"/>
+        <ul className={`text-lg ${EffraFont.className} mt-20 lg:mt-0 flex-col lg:flex-row text-black flex items-center justify-between gap-10`}>
           <li className="relative">
             <Link className="menu_item" href="">Privacy Policy</Link>
           </li>
