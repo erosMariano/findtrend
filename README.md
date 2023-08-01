@@ -1,29 +1,41 @@
-# Next.js + Jest
+<img src="./public/logo-readme.png">
 
-This example shows how to configure Jest to work with Next.js.
+<h1 id="sobre" style="margin-top: 20px; margin-bottom: 20px; text-align: center;"><strong>FindTrend</strong></h1>
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+> Não deixe que as memórias do seu computador consumam todas as abas do navegador. Findtrend permite reunir todos os seus sites favoritos em um só lugar.
 
-## How to Use
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
 
-In your terminal, run the following command:
+<img style="margin-top: 40px; margin-bottom: 40px; text-align: center;" src="./public/banner.png">
 
-```bash
-npx create-next-app --example with-jest with-jest-app
+
+## Como instalar
+
+* Para baixar o projeto, siga as instruções abaixo:
+
+```
+1. git clone https://github.com/erosMariano/findtrend.git
+2. cd findtrend
 ```
 
-```bash
-yarn create next-app --example with-jest with-jest-app
+* Instale as dependências e inicie o servidor:
+
+```
+3. yarn install
+4. yarn dev
 ```
 
-```bash
-pnpm create next-app --example with-jest with-jest-app
+ou
+
+```
+3. npm install
+4. npm dev
 ```
 
-## Run Jest Tests
 
-```bash
-npm test
-```
+
+## Entre em contato
+[Eros Mariano - Linkedin](https://www.linkedin.com/in/erosmariano)
+
+
+Feito com ❤️ por Eros Mariano 👋🏽 Entre em contato!
